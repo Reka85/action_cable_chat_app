@@ -3,6 +3,7 @@
     <%= message.user.username %>:
   </div>
   <div class="message-content">
-    <%= message.content %>
+    <!--sanitize deactivates potentially dangerous code-->
+    <%= sanitize markdown_to_html(message.content) %>
   </div>
 </div>
